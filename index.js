@@ -22,8 +22,7 @@ exports.handler = function(event, context) {
         .resize(480, 269)
         .fill("#81BD27")
         .drawText(200, 250, 'LGTM')
-        .font('/usr/share/fonts/dejavu/DejaVuSans.ttf')
-	.fontSize(40)
+        .font('/usr/share/fonts/dejavu/DejaVuSans.ttf', 40)
         .toBuffer(extension, function(err, stdout) {
           if (err) {
               context.done('resize and drawtext failed', err);
